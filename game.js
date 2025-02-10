@@ -46,15 +46,9 @@ function playRound(humanChoice, computerChoice) {
     resultDiv.textContent = roundResult;
     scoreboard.appendChild(resultDiv);
     if (humanScore > 4 || computerScore > 4) {
-        rockBtn.removeEventListener("click", () => {
-            playRound();
-        });
-        paperBtn.removeEventListener("click", () => {
-            playRound();
-        });
-        scissorsBtn.removeEventListener("click", () => {
-            playRound();
-        });
+        rockBtn.disabled = true;
+        paperBtn.disabled = true;
+        scissorsBtn.disabled = true;
     
         let gameResultDiv = document.createElement("div");
         
